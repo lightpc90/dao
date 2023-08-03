@@ -445,6 +445,7 @@ export default function Home() {
       </div>
 
       <div className={styles.footer}>
+        
         With &#10084; by Gideon Abbey (24Codelabz)
       </div>
     </>
