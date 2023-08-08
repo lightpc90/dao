@@ -325,7 +325,7 @@ export default function Home() {
             type="number"
             onChange={(e) => setFakeNftTokenId(e.target.value)}
           />
-          <button className={styles.button2} onClick={createProposal}>
+          <button className={styles.button2} onPress={createProposal}>
             Create
           </button>
         </div>
@@ -360,13 +360,13 @@ export default function Home() {
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
-                    onClick={() => voteOnProposal(p.proposalId, "YAY")}
+                    onPress={() => voteOnProposal(p.proposalId, "YAY")}
                   >
                     Vote YAY
                   </button>
                   <button
                     className={styles.button2}
-                    onClick={() => voteOnProposal(p.proposalId, "NAY")}
+                    onPress={() => voteOnProposal(p.proposalId, "NAY")}
                   >
                     Vote NAY
                   </button>
@@ -375,7 +375,7 @@ export default function Home() {
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
-                    onClick={() => executeProposal(p.proposalId)}
+                    onPress={() => executeProposal(p.proposalId)}
                   >
                     Execute Proposal{" "}
                     {p.yayVotes > p.nayVotes ? "(YAY)" : "(NAY)"}
@@ -415,13 +415,13 @@ export default function Home() {
           <div className={styles.flex}>
             <button
               className={styles.button}
-              onClick={() => setSelectedTab("Create Proposal")}
+              onPress={() => setSelectedTab("Create Proposal")}
             >
               New Proposal
             </button>
             <button
               className={styles.button}
-              onClick={() => setSelectedTab("View Proposals")}
+              onPress={() => setSelectedTab("View Proposals")}
             >
               View Proposals
             </button>
@@ -431,7 +431,7 @@ export default function Home() {
           {isOwner ? (
             <div>
             {loading ? <button className={styles.button}>Loading...</button>
-                     : <button className={styles.button} onClick={withdrawDAOEther}>
+                     : <button className={styles.button} onPress={withdrawDAOEther}>
                          Withdraw DAO ETH
                        </button>
             }
